@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PNRTrain</title>
+  <link href="productLandingPage.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="pics/PNRLogo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+</head>
+
+<body>
+    <!-- 1. As a user, I want my product landing page to have a header element with a corresponding id="header" -->
+    <header id="header">
+        <!-- 2. As a user, I want to see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+        <div id="header-img">
+            <img class="header-img" src="pics/PNRLogo.png" alt="company logo">Trains
+            <div class="pnr-header"><i id="fa-solid fa-bars"></i></div>
+        </div>
+        <!-- 3. Within the #header element I want to see a nav element with a corresponding id="nav-bar". -->
+        <nav id="nav-bar">
+            <!-- 4. I want to see at least three clickable elements inside the nav element, each with the class nav-link. -->
+            <!-- 5. As a user, when I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+            <a class="nav-link" href="#section1">Locomotive</a>
+            <a class="nav-link" href="#section2">Multiple Unit</a>
+            <a class="nav-link" href="#section3">Wagons</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <section class="left">
+            <p class="title">You can have your own train<strong>NOW!</strong></p>
+            <p class="description">With the closure of Metro Manila operations of the Philippine National Railways (PNR) to make way for the construction of the future railway, they are disposing of their trains by selling them at low prices. Just fill out the form below, and we will deliver one to your house in no time.</p>
+            <!-- 6. As a user, I can watch an embedded product video with id="video".  -->
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/BU1vkR2dddA" title="Clark depot ng North-South Commuter Railway ipinasilip" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+        <section class="right">
+            <img src="pics/PNRLocomotive.png" alt="locomotive">
+            <div class="train">
+                <div class="PNR locomotive">
+                    <div class="train-color"></div>
+                    <div class="info">
+                        <p>Locomotive</p>
+                        <p>₱ tatlo, dos</p>
+                    </div>
+                    <img src="pics/PNRLocomotive-S.png">
+                </div>
+                <div class="PNR DMU">
+                    <div class="train-color"></div>
+                    <img src="pics/PNRDMU.png">
+                </div>
+                <div class="PNR wagons">
+                    <div class="train-color"></div>
+                    <img src="pics/PNRWagons.png">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="section1">
+        <h2>Locomotive</h2>
+        <span>a type of railway locomotive in which the power source is a diesel engine. Several types of diesel locomotives have been developed, differing mainly in the means by which mechanical power is conveyed to the driving wheels. The most common are diesel-electric locomotives and diesel-hydraulic.</span>
+    </section>
+
+    <section id="section2">
+        <h2>Multiple Unit</h2>
+        <span>a multiple-unit train powered by on-board diesel engines. A DMU requires no separate locomotive, as the engines are incorporated into one or more of the carriages. Diesel-powered single-unit railcars are also generally classed as DMUs. Diesel-powered units may be further classified by their transmission type: diesel–mechanical DMMU, diesel–hydraulic DHMU, or diesel–electric DEMU.</span>
+    </section>
+
+    <section id="section3">
+        <h2>Wagons</h2>
+        <span>a car that was normally placed between the train's motive power and the remainder of the passenger train. The car's interior is normally wide open and is used to carry passengers' checked baggage. Baggage cars were also sometimes commissioned by freight companies to haul less-than-carload (LCL) shipments along passenger routes (Railway Express Agency was one such freight company).</span>
+    </section>
+
+    <footer>
+    <!-- 7. As a user, my landing page should have a form element with a corresponding id="form". -->
+     <!-- 12. When I click the #submit element, the email is submitted to a static page. -->
+        <form id="form" method="post">
+            <label for="email">Buy Now!</label>
+            <!-- 8. Within the form, I want to see an input field with id="email" where I can enter an email address. -->
+            <!-- 9. The #email input field should have a placeholder text to let the user know what the field is for. -->
+            <!-- 10. The #email input field uses HTML5 validation to confirm that the entered text is an email address. --> 
+            <input type="email" id="email" name="email" placeholder="Enter your email to start" required>
+            <!-- 11. Within the form, I want to see a submit input with a corresponding id="submit". -->
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </footer>
+</body>
+</html>
