@@ -6,20 +6,18 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    background-color: rgb(255, 255, 255);
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 header {
     /* 13. The navbar should always be at the top of the viewport. */
     /* 15. My product landing page should utilize CSS flexbox at least once. */    
     position: sticky;
-    display: flex;    
+    display: flex;   
     top: 0;
-    height: 50px;
+    height: 10vh;
     width: 100%;    
     justify-content: space-between;
     align-items: center;
@@ -52,16 +50,18 @@ header {
 .nav-link {
     list-style: none;
     display: inline-block;
-    margin-left: 44px;
+    margin-left: 30px;
     cursor: pointer;
     transition: color 0.5s;
     color: white;
+    font-size: 1.2em;
 }
 
-
 .main {
+    height: 90vh;
     position: relative;
     display: flex;
+    background-color: rgb(160, 56, 56);
 }
 
 .left {
@@ -70,62 +70,38 @@ header {
 }
 
 .title {
-    font-size: 2em;
+    font-size: 3em;
     letter-spacing: 1px;
-    margin: 10px 50px 0px 50px;
     color: orange;
+    text-shadow: 1px 1px 4px black;
+    padding: 10px;
 }
 
 .title strong {
     font-size: 1.5em;
     display: block;
-    line-height: 80px;
+    line-height: 70px;
 }
 
 .description {
     max-width: 100%;
-    font-size: 1em;
+    font-size: 1.5em;
     letter-spacing: 2px;
     line-height: 32px;
     color: white;
-    background-color: black;
+    text-shadow: 5px 10px 10px black;
     opacity: .5;
     text-align: justify;
-    padding: 20px;
-}
-
-#form {
-    font-size: 2em;
-    font-weight: bolder;
-    color: black;
-    text-align: center;
-}
-
-#submit {
-    background-color: #fff;
-    color: black;
-    margin-top: 5px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: .5em;
-}
-
-#submit:hover {
-    background-color: #0169aa;
+    padding-left: 10px;
 }
 
 #video {
-    padding-top: 30px;
-    margin-left: 50px;
-    width: 450px;
+    padding: 10px;
+    width: 95%;
 }
 
 .right {
-    max-width: 50%;
+    max-width: 100%;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -133,12 +109,13 @@ header {
 }
 
 .right img {
+    padding: 50px 0px 00px 50px;
     max-width: 100%;
 }
 
 .train {
     display: flex;
-    border-top: 3px dotted #fff;
+    border-top: 3px dotted rgb(0, 0, 0);
 }
 
 .train .PNR {
@@ -148,7 +125,6 @@ header {
     align-items: center;
     min-width: 120px;
     min-height: 180px;
-    padding-top: 40px;
 }
 
 .PNR img {
@@ -170,7 +146,7 @@ header {
     width: 16px;
     height: 16px;
     transform: translate(-50%, -50%);
-    border: 2px solid #fff;
+    border: 2px solid orange;
     border-radius: 50%;
 }
 
@@ -193,7 +169,7 @@ header {
 }
 
 .info {
-    background-color: #fff;
+    background-color: orange;
     border-radius: 16px;
     position: absolute;
     left: 60%;
@@ -201,58 +177,60 @@ header {
     text-align: right;
     padding: 5px 10px;
     line-height: 15px;
-    font-size: .8em;
+    font-size: .7em;
     letter-spacing: 0.5px;
     font-weight: bold;
     color: black;
 }
 
-h2 {
-    padding: 20px 20px;
-    text-align: center;
-    background-color: grey;
+section {
+    background-color: rgb(160, 56, 56);
+    scroll-snap-align: start;
 }
 
-span {
-    padding: 20px 20px;
-    background-color: grey;
+#section1, #section2 {
+    text-align: center;
+    height: 100vh;
+    font-size: 1.5em;
+}
+
+#section3 {
+    text-align: center;
+    height: 80vh;
+    font-size: 1.5em;
 }
 
 footer {
-    margin-top: 5%;
     height: auto;
-    background-color: #eeeeee;
+    background-color: rgb(160, 56, 56);
     padding: 20px;
     text-align: center;
 }
 
+#form {
+    font-size: 2em;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+}
+
 #submit {
+    background-color: #fff;
+    color: black;
+    margin-top: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: .5em;
     width: 100%;
 }
 
-/* 14. My product landing page should have at least one media query. */
-
-@media only screen and (min-width: 768px) {
-    .header-img {
-        display: block;
-        max-width: 100px;
-    }
-
-    .right {
-        display: flex;
-        gap: 27px;
-    }
-
-    .shopee-header {
-        display: none;
-    }
-
-    p:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-    .products {
-        grid-template-columns: 1fr 1fr;
-    }
+#submit:hover {
+    background-color: #0169aa;
 }
+
+/* 14. My product landing page should have at least one media query. */
+@media only screen and (min-width: 1024px){}
