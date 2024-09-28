@@ -2,13 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+section {
+    background-color: rgb(71, 124, 181);
 }
 
 header {
@@ -18,7 +16,7 @@ header {
     display: flex;   
     top: 0;
     height: 10vh;
-    width: 100%;    
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding-inline: 20px;
@@ -36,21 +34,17 @@ header {
     font-size: 2em;
     letter-spacing: 0.5px;
     color: white;
+    background-color: none;
 }
 
-#header-img img {
-    width: 40px;
+.header-img {
+    width: 60px;
     margin-right: 8px;
 }
 
-.nav-link:hover {
-    color: orange;
-}
-
 .nav-link {
-    list-style: none;
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 50px;
     cursor: pointer;
     transition: color 0.5s;
     color: white;
@@ -58,32 +52,28 @@ header {
 }
 
 .main {
-    height: 90vh;
     display: flex;
-    background-color: rgb(160, 56, 56);
 }
 
 .left {
-    max-width: 50%;
-    padding: repeat (4, 5px);
+    max-width: 60%;
 }
 
-.title {
+#title {
     font-size: 3em;
     letter-spacing: 1px;
     color: orange;
     text-shadow: 1px 1px 4px black;
-    padding: 10px;
+    padding: 20px 20px 0px 20px;
 }
 
-.title strong {
+#title strong {
     font-size: 1.5em;
     display: block;
     line-height: 70px;
 }
 
 .description {
-    max-width: 100%;
     font-size: 1.5em;
     letter-spacing: 2px;
     line-height: 32px;
@@ -91,170 +81,232 @@ header {
     text-shadow: 5px 10px 10px black;
     opacity: .5;
     text-align: justify;
-    padding-left: 10px;
+    padding: 10px 20px 10px 20px;
 }
 
 #video {
-    padding: 10px;
-    width: 95%;
+    padding-left: 10px;
+    width: 90%;
 }
 
 .right {
-    max-width: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 50px;
+    max-width: 40%;
 }
 
 .right img {
-    padding: 100px 0px 50px 50px;
     max-width: 100%;
+    margin: 20px 40px 40px 20px;
 }
 
-.train {
-    display: flex;
-    border-top: 3px dotted rgb(0, 0, 0);
-}
-
-.train .PNR {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 120px;
-    min-height: 180px;
-}
-
-.PNR img {
-    position: relative;
-    width: 120px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.PNR img:hover {
-    width: 150px;
-}
-
-.PNR .train-color {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    background-color: orange;
-    width: 16px;
-    height: 16px;
-    transform: translate(-50%, -50%);
-    border: 2px solid orange;
-    border-radius: 50%;
-}
-
-.PNR.DMU .train-color {
-    background-color: blue;
-}
-
-
-.PNR.wagons .train-color {
-    background-color: brown;
-}
-
-
-.PNR:first-child {
-    transform: translateX(-50%);
-}
-
-.PNR:last-child {
-    transform: translateX(50%);
-}
-
-.info {
-    background-color: orange;
+#infojs {
     border-radius: 16px;
-    position: absolute;
-    left: 60%;
-    width: 100%;
-    text-align: right;
-    padding: 5px 10px;
-    line-height: 15px;
-    font-size: .7em;
-    letter-spacing: 0.5px;
+    max-width: 100%;
+    text-align: center;
+    padding: 10px;
+    line-height: 25px;
     font-weight: bold;
-    color: black;
+    margin: auto;
 }
 
-section {
-    background-color: rgb(160, 56, 56);
-    scroll-snap-align: start;
+#infojs {
+    list-style-type: none;
 }
 
 #section1, #section2 {
     text-align: center;
-    height: 100vh;
     font-size: 1.5em;
+    height: 100vh;
 }
 
-#section3 {
-    text-align: center;
-    height: 80vh;
+.subtitle p {
     font-size: 1.5em;
+    font-weight: bolder;
+    padding-top: 20px;
+}
+
+.description1, #description1 {
+    padding: 20px 50px;
 }
 
 .pic {
-    padding: 50px 0px 50px 0px;
+    padding: 50px 0px;
+    border: 5px solid black;
+    max-width: 100%;
 }
 
-h1 {
-    padding: 20px;
+.info2 ul {
+    font-weight: bolder;
+    padding-top: 50px;
 }
 
-.description1 {
-    padding: 0px 20px 0px 20px;
-    letter-spacing: 2px;
+.pic1 {
+    padding: 30px 0px;
+    border: 5px solid black;
+    max-width: 100%;
+}
+
+.info3 ul {
+    font-weight: bolder;
+    padding: 10px 10px 0px 10px;
+    list-style-type: none;
+}
+
+#form label {
+    font-weight: bolder;
 }
 
 footer {
-    height: auto;
-    background-color: rgb(160, 56, 56);
+    background-color: black;
     text-align: center;
 }
 
-#form {
-    font-size: 2em;
-    font-weight: bolder;
-    color: black;
-    text-align: center;
-}
-
-#submit {
-    background-color: #fff;
-    color: black;
-    margin-top: 5px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: .5em;
-    width: 100%;
-}
-
-#submit:hover {
-    background-color: #0169aa;
+#section3 {
+    display: none;
 }
 
 /* 14. My product landing page should have at least one media query. */
-@media only screen and (max-width: 768px) {
-    .container {
-        display: none;
-        background-color: black;
+
+@media only screen and (min-width: 991px) and (max-width:1246px){
+    .info2 ul {
+        font-weight: bolder;
+        padding-top: 10px;
     }
 
-    footer {
+    .description1, #description1 {
+        padding: 10px 40px;    
+        text-align: justify;
+    }
+
+    .subtitle p {
+        padding: 10px;
+    }
+
+    .pic, .pic1 {
+        padding: 20px 0px;
+        border: 2px solid black;
+        max-width: 50%;
+    }
+
+    .info3 ul {
+        font-weight: bolder;
+        padding: 10px 10px 0px 10px;
+    }
+
+    #section2 {
+        height: 110vh;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 991px){
+    .description1, #description1 {
+        padding: 10px 30px;
+        font-size: 0.9em;
+    }
+
+    .pic, .pic1 {
+        padding: 30px 0px;
+        border: 2px solid black;
+        max-width: 50%;
+    }
+
+    .info2 ul {
+        font-weight: bolder;
+        padding-top: 10px;
+    }
+
+    .info3 ul {
+        font-weight: bolder;
+        padding: 10px 10px 0px 10px;
+    }
+
+    .subtitle p {
+        padding: 0px;
+    }
+
+    #section2 {
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width:780px) {
+    #section3 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subtitle3 p {
+        font-size: 2.2em;
+        font-weight: bolder;
+        padding-top: 10px;
+    }
+
+    .description1, #description1 {
+        padding: 10px;
+        font-size: 0.8em;
+        text-align: justify;
+    }
+
+    .description3 {
+        padding: 10px;
+        font-size: 1.2em;
+        text-align: justify;
+    }
+
+    .item3 img {
+        max-width: 40%;
+    }
+
+    .info4 ul {
+        font-weight: bolder;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+
+    .left {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #video {
+        padding: 0px;
+        margin: auto;
+        width: 90%;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    .right {
         display: none;
     }
 
-    li {
+    #section1, #section3 {
+        height: 90vh;
+    }
+
+    #section2 {
+        height: 95vh;
+    }
+}
+
+@media only screen and (max-width: 462px) {
+    #nav-bar a{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    body {
         display: none;
     }
 }
